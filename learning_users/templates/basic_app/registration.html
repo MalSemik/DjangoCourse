@@ -4,18 +4,18 @@
 
 <div class="jumbotron">
     {% if registered %}
-        <h1>Dziękuję za zarejestrowanie się</h1>
+        <h1>Thanks for registering!</h1>
 
     {% else %}
-    <h1>Zarejestruj się tu!</h1>
-    <h3>Uzupełnij formularz:</h3>
+    <h1>Register!</h1>
+    <h3>Fill the form:</h3>
 
     <form enctype="multipart/form-data" method="POST" >
         {% csrf_token %}
         {{ user_form.as_p }}
 
         {{ profile_form.as_p}}
-        <input type="submit" value="Zarejestruj się">
+        <input type="submit" value="Register">
     </form>
 
     {% endif %}
