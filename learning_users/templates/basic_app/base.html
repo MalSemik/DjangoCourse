@@ -14,10 +14,10 @@
         <a class="nav-item nav-link" href="{% url 'basic_app:register' %}">Register</a>
 
         {% if user.is_authenticated %}
-        <a class='nav-item nav-link' href="{% url 'logout' %}">Wyloguj się</a>
+        <a class='nav-item nav-link' href="{% url 'logout' %}">Sign out</a>
 
         {% else %}
-        <a class='nav-item nav-link' href="{% url 'basic_app:user_login' %}">Zaloguj się</a>
+        <a class='nav-item nav-link' href="{% url 'basic_app:user_login' %}">Sign in</a>
         {% endif %}
 
     </div>
